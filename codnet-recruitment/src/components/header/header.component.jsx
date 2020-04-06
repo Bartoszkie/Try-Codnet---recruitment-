@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useLocation } from "react-router-dom";
-import logoSM from '../assets/img/logo-sm.png';
+import logoSM from '../../assets/img/logo-sm.png';
 
 //STYLES
 import {
