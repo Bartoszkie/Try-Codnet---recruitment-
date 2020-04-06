@@ -1,8 +1,9 @@
 import React from "react";
 
+//STYLES
 import { H1, H2, H3, H4, H5, P } from "./typography.styles";
 
-const Typography = props => {
+const Typography = (props) => {
   return (
     <React.Fragment>
       {props.type === "h1" ? (
@@ -15,7 +16,7 @@ const Typography = props => {
         <H4>{props.children}</H4>
       ) : props.type === "h5" ? (
         <H5>{props.children}</H5>
-      ) : props.type === "normall" ? (
+      ) : props.type === "p" ? (
         <P>{props.children}</P>
       ) : null}
     </React.Fragment>
