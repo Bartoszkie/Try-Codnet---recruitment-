@@ -1,6 +1,13 @@
 import React, { useEffect } from "react";
 import { useLocation } from "react-router-dom";
+<<<<<<< HEAD:codnet-recruitment/src/components/header/header.component.jsx
 import logoSM from '../../assets/img/logo-sm.png';
+=======
+import logoSM from "../assets/img/logo-sm.png";
+import { connect } from "react-redux";
+
+import { fetchInfoAboutCrypto } from "../redux/cryptocurencies/crypto.actions";
+>>>>>>> header:codnet-recruitment/src/components/header.component.jsx
 
 //STYLES
 import {
@@ -9,17 +16,17 @@ import {
   HeaderLogo,
   HeaderSwitch,
   HeaderNavigation,
-  HeaderAppName, 
-  HeaderAppNameBold, 
-  HeaderButtonLogo, 
-  HederSwitchOption
+  HeaderAppName,
+  HeaderAppNameBold,
+  HeaderButtonLogo,
+  HederSwitchOption,
 } from "./header.styles";
 
-const Header = () => {
+const Header = (props) => {
   const { pathname } = useLocation();
 
   const actionToTriggerPathname = () => {
-    console.log("syfek");
+    props.fetchInfoAboutCrypto(pathname);
   };
 
   useEffect(actionToTriggerPathname, [pathname]);
@@ -27,7 +34,7 @@ const Header = () => {
   return (
     <HeaderContainer>
       <HeaderButtonLogo to="/bitcoin">
-        <HeaderLogo src={logoSM}/>
+        <HeaderLogo src={logoSM} />
         <HeaderAppName>
           <HeaderAppNameBold>IT</HeaderAppNameBold>Recruitment
         </HeaderAppName>
@@ -35,7 +42,7 @@ const Header = () => {
 
       <HeaderNavigation>
         <HeaderButton to="/bitcoin">Bitcoin</HeaderButton>
-        <HeaderButton to="/enumerum">Enumerum</HeaderButton>
+        <HeaderButton to="/ethereum">Enumerum</HeaderButton>
         <HeaderButton to="/eos">EOS</HeaderButton>
       </HeaderNavigation>
 
@@ -48,4 +55,10 @@ const Header = () => {
   );
 };
 
-export default Header;
+const mapStateToProps = (state) => ({});
+
+const mapDispatchToProps = (dispatch) => ({
+  fetchInfoAboutCrypto: (pathname) => dispatch(fetchInfoAboutCrypto(pathname)),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Header);
