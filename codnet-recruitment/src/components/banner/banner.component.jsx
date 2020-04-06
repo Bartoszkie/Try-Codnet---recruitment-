@@ -50,7 +50,15 @@ const Banner = (props) => {
             : null}
         </Typography>
         <CryptoCurrencyValue>
-          <Typography type="h2">USD</Typography>
+          <Typography type="h2">
+            {selectedCurrency === "USD"
+              ? "USD"
+              : selectedCurrency === "EUR"
+              ? "EUR"
+              : selectedCurrency === "PLN"
+              ? "PLN"
+              : null}
+          </Typography>
         </CryptoCurrencyValue>
       </CryptoCurrencyPricingInfo>
     </BannerContainer>
