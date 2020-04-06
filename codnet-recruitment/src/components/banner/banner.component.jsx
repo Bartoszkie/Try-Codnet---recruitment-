@@ -14,6 +14,13 @@ import {
 
 const Banner = (props) => {
   console.log(props.cryptocurrency.loading);
+  console.log(props.selectedCurrency);
+
+  const { selectedCurrency } = props.selectedCurrency;
+  console.log(
+    "this is selected-currency in banner components",
+    selectedCurrency
+  );
 
   if (props.cryptocurrency.loading) {
     return <p>Is Loading</p>;
@@ -27,13 +34,21 @@ const Banner = (props) => {
         ></CryptoCurrencyLogo>
         <Typography type="h2">
           {props.cryptocurrency.cryptocurrency.id}
-          <br/>
+          <br />
           {props.cryptocurrency.cryptocurrency.symbol}
         </Typography>
       </CryptoCurrencyInfo>
 
       <CryptoCurrencyPricingInfo>
-        <Typography type="h2">{props.cryptocurrency.cryptocurrency.market_data.current_price.usd}</Typography>
+        <Typography type="h2">
+          {selectedCurrency === "USD"
+            ? `${props.cryptocurrency.cryptocurrency.market_data.current_price.usd}`
+            : selectedCurrency === "EUR"
+            ? `${props.cryptocurrency.cryptocurrency.market_data.current_price.eur}`
+            : selectedCurrency === "PLN"
+            ? `${props.cryptocurrency.cryptocurrency.market_data.current_price.pln}`
+            : null}
+        </Typography>
         <CryptoCurrencyValue>
           <Typography type="h2">USD</Typography>
         </CryptoCurrencyValue>
@@ -44,6 +59,7 @@ const Banner = (props) => {
 
 const mapStateToProps = (state) => ({
   cryptocurrency: state.crypto,
+  selectedCurrency: state.header,
 });
 
 export default connect(mapStateToProps)(Banner);
