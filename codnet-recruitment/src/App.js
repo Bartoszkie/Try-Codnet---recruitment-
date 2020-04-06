@@ -1,16 +1,14 @@
 import React from "react";
 import { Route } from "react-router-dom";
 
-//STYLES
-import { GlobalGrid, GlobalStyles } from "./styles/global.styles";
-
 //COMPONENTS
 //PAGES
+import MainPage from './pages/main-page.page';
 
 const App = () => {
   return (
     <React.Fragment>
-      <Route exact path="/" component={MainPage}/>  
+      <Route path="/" component={MainPage}/>  
     </React.Fragment>
   );
 };
