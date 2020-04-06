@@ -1,9 +1,13 @@
 import React from "react";
+import {connect} from "react-redux";
 
 import { BannerInfoContainer, BannerInfoBox } from "./banner-info.styles";
 import Typography from "../typography/typography.component";
 
-const BannerInfo = () => {
+const BannerInfo = (props) => {
+
+  
+
   return (
     <BannerInfoContainer>
       <BannerInfoBox>
@@ -28,4 +32,8 @@ const BannerInfo = () => {
   );
 };
 
-export default BannerInfo;
+const mapStateToProps = (state) => ({
+  cryptocurrency: state.crypto,
+});
+
+export default connect(mapStateToProps)(BannerInfo);
