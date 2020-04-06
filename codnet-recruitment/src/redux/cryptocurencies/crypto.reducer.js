@@ -4,6 +4,7 @@ const INITIAL_STATE = {
   cryptocurrency: null,
   loading: true,
   errorMessage: undefined,
+  pathname: "",
 };
 
 const CryptoReducer = (state = INITIAL_STATE, action) => {
@@ -12,8 +13,8 @@ const CryptoReducer = (state = INITIAL_STATE, action) => {
       return {
         ...state,
         loading: true,
+        pathname: action.payload,
       };
-
     case CryptoActionTypes.BITCOIN_SUCCESS:
     case CryptoActionTypes.ENUMERUM_SUCCESS:
     case CryptoActionTypes.EOS_SUCCESS:
