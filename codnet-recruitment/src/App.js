@@ -1,14 +1,17 @@
 import React from "react";
-import { Route } from "react-router-dom";
+import { Switch, Route, Redirect } from "react-router-dom";
 
 //COMPONENTS
 //PAGES
-import MainPage from './pages/main-page.page';
+import MainPage from "./pages/main-page.page";
 
 const App = () => {
   return (
     <React.Fragment>
-      <Route path="/" component={MainPage}/>  
+      <Switch>
+        <Redirect exact from="/" to="/bitcoin" />
+        <Route path="/" component={MainPage} />
+      </Switch>
     </React.Fragment>
   );
 };
