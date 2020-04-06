@@ -6,7 +6,7 @@ export const CharContainerWrapper = styled.section`
 
   background-color: rgba(0, 0, 0, 0.1);
 
-  padding: 2rem; 
+  padding: 5rem 2rem 2rem 2rem; 
 `;
 
 export const ChartButtonsContainer = styled.div`

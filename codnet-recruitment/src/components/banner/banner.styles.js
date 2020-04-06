@@ -5,6 +5,7 @@ export const BannerContainer = styled.section`
   grid-row: 2 / 3;
 
   padding: 4rem 2rem;
+  height: 27vh;
 
   display: flex;
   align-items: center;
