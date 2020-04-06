@@ -1,13 +1,9 @@
 import React, { useEffect } from "react";
 import { useLocation } from "react-router-dom";
-<<<<<<< HEAD:codnet-recruitment/src/components/header/header.component.jsx
-import logoSM from '../../assets/img/logo-sm.png';
-=======
-import logoSM from "../assets/img/logo-sm.png";
+import logoSM from "../../assets/img/logo-sm.png";
 import { connect } from "react-redux";
 
-import { fetchInfoAboutCrypto } from "../redux/cryptocurencies/crypto.actions";
->>>>>>> header:codnet-recruitment/src/components/header.component.jsx
+import { fetchInfoAboutCrypto } from "../../redux/cryptocurencies/crypto.actions";
 
 //STYLES
 import {
