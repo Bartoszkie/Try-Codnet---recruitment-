@@ -2,15 +2,13 @@ import CryptoActionTypes from "./crypto.types";
 
 const INITIAL_STATE = {
   cryptocurrency: null,
-  loading: false,
+  loading: true,
   errorMessage: undefined,
 };
 
 const CryptoReducer = (state = INITIAL_STATE, action) => {
   switch (action.type) {
-    case CryptoActionTypes.BITCOIN_START:
-    case CryptoActionTypes.ENUMERUM_START:
-    case CryptoActionTypes.EOS_START:
+    case CryptoActionTypes.FETCH_START:
       return {
         ...state,
         loading: true,

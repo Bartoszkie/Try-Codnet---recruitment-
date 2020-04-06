@@ -1,5 +1,7 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Typography from "../typography/typography.component";
+
+import { connect } from "react-redux";
 
 //SYLES
 import {
@@ -10,16 +12,28 @@ import {
   CryptoCurrencyValue,
 } from "./banner.styles";
 
-const Banner = () => {
+const Banner = (props) => {
+  console.log(props.cryptocurrency.loading);
+
+  if (props.cryptocurrency.loading) {
+    return <p>Is Loading</p>;
+  }
+
   return (
     <BannerContainer>
       <CryptoCurrencyInfo>
-        <CryptoCurrencyLogo></CryptoCurrencyLogo>
-        <Typography type="h2">Bitcoin</Typography>
+        <CryptoCurrencyLogo
+          src={props.cryptocurrency.cryptocurrency.image.small}
+        ></CryptoCurrencyLogo>
+        <Typography type="h2">
+          {props.cryptocurrency.cryptocurrency.id}
+          <br/>
+          {props.cryptocurrency.cryptocurrency.symbol}
+        </Typography>
       </CryptoCurrencyInfo>
 
       <CryptoCurrencyPricingInfo>
-        <Typography type="h2">$7,759.05</Typography>
+        <Typography type="h2">{props.cryptocurrency.cryptocurrency.market_data.current_price.usd}</Typography>
         <CryptoCurrencyValue>
           <Typography type="h2">USD</Typography>
         </CryptoCurrencyValue>
@@ -28,4 +42,8 @@ const Banner = () => {
   );
 };
 
-export default Banner;
+const mapStateToProps = (state) => ({
+  cryptocurrency: state.crypto,
+});
+
+export default connect(mapStateToProps)(Banner);
