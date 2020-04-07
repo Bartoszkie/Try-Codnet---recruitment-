@@ -1,6 +1,8 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
+import { respondTo } from "../../styles/mixins";
+
 export const HeaderContainer = styled.header`
   grid-column: full-start / full-end;
   grid-row: 1 / 2;
@@ -13,6 +15,10 @@ export const HeaderContainer = styled.header`
 
   padding: 2rem 2rem;
   position: relative;
+
+  ${respondTo.sm`
+    padding-bottom: 5rem;
+  `}
 `;
 
 export const HeaderButton = styled(Link)`
@@ -33,6 +39,10 @@ export const HeaderNavigation = styled.div`
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+
+  ${respondTo.sm`
+      top: 80%;
+  `}
 `;
 
 export const HeaderSwitch = styled.select`

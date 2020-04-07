@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { respondTo } from "../../styles/mixins";
 
 export const BannerContainer = styled.section`
   grid-column: full-start / full-end;
@@ -12,6 +13,12 @@ export const BannerContainer = styled.section`
   justify-content: space-between;
 
   position: relative;
+
+  ${respondTo.sm`
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  `}
 `;
 
 export const CryptoCurrencyInfo = styled.div`
@@ -30,6 +37,11 @@ export const CryptoCurrencyInfo = styled.div`
   & h2:nth-child(3) {
     text-transform: uppercase;
   }
+
+  ${respondTo.sm`
+      margin-bottom: 3rem;
+  `}
+
 `;
 
 export const CryptoCurrencyLogo = styled.img`

@@ -14,6 +14,7 @@ import {
 } from "./chart-container.styles";
 import Chart from "../chart/chart.component";
 
+
 const ChartContainer = (props) => {
   const [infoChange, setInfoChange] = useState({ show: "charts" });
 

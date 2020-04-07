@@ -8,7 +8,7 @@ import BannerInfo from "../components/banner-info/banner-info.component";
 import ChartContainer from "../components/chart-container/chart-container.component";
 import Footer from "../components/footer/footer.component";
 import { connect } from "react-redux";
-import Spinner from '../components/spinner/spinner.component';
+import Spinner from "../components/spinner/spinner.component";
 
 const MainPage = (props) => {
   const { loading } = props.cryptocurrency;
@@ -24,7 +24,7 @@ const MainPage = (props) => {
             <ChartContainer />
           </React.Fragment>
         ) : (
-          <Spinner/>
+          <Spinner />
         )}
         <Footer />
       </GlobalGrid>

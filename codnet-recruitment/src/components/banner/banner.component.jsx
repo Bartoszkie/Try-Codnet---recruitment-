@@ -61,11 +61,11 @@ const Banner = (props) => {
         </CryptoCurrencyValue>
         <Button blue={true} handleOpenModal={handleOpenModal}>
           {cryptocurrency.id === "bitcoin"
-            ? `Bitcoin (BTC)`
+            ? `Buy Bitcoin (BTC)`
             : cryptocurrency.id === "ethereum"
-            ? `Ethereum (ETH)`
+            ? `Buy Ethereum (ETH)`
             : cryptocurrency.id === "eos"
-            ? `EOS (EOS)`
+            ? `Buy EOS (EOS)`
             : null}
         </Button>
       </CryptoCurrencyPricingInfo>

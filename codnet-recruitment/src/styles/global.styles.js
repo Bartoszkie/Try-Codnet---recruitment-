@@ -11,6 +11,23 @@ export const GlobalStyles = createGlobalStyle`
         box-sizing: border-box;
         font-size: 62.5%;
         font-family: 'Roboto', sans-serif;
+
+          @media only screen and (max-width: 1200px) { 
+              font-size: 56.25%; 
+          }
+
+          @media only screen and (max-width: 900px) { 
+              font-size: 50%; 
+          }
+
+          @media only screen and (min-width: 1200px) {
+              font-size: 75%; 
+          }
+    }
+
+    ::selection {
+      color: #fff;
+      background: #55AFE4;
     }
 `;
 
@@ -23,6 +40,9 @@ export const GlobalGrid = styled.section`
     )
     [center-end] minmax(15rem, 1fr) [full-end];
   grid-template-rows: min-content min-content 60vh min-content;
+  justify-content: center;
+
   height: 100vh;
+
   position: relative;
 `;

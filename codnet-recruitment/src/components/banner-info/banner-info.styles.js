@@ -1,9 +1,11 @@
 import styled from "styled-components";
+import { respondTo } from "../../styles/mixins";
 
 export const BannerInfoContainer = styled.section`
   display: flex;
   justify-content: space-around;
   align-items: flex-start;
+  flex-wrap: wrap;
 
   padding: 4rem 6rem;
   box-shadow: 0px 20px 60px #a3abba66;
@@ -17,12 +19,22 @@ export const BannerInfoContainer = styled.section`
   top: 100%;
   left: 50%;
   transform: translate(-50%, -50%);
+
+  ${respondTo.sm`
+    width: 100%;
+    padding: 2rem;
+    top: 120%;
+  `}
 `;
 
 export const BannerInfoBox = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+
+  ${respondTo.sm`
+    margin: 2rem;
+  `}
 
   & > p:first-child {
     color: ${({ theme }) => theme.greyTextColor};
