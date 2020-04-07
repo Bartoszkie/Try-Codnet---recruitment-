@@ -1,7 +1,12 @@
 import CryptoActionTypes from "./crypto.types";
 
+export const fetchDate = (date) => ({
+  type: CryptoActionTypes.GET_DATE,
+  payload: date,
+});
+
 export const fetchInfoAboutCrypto = (pathname) => ({
-  type: CryptoActionTypes.FETCH_START, 
+  type: CryptoActionTypes.FETCH_START,
   payload: pathname,
 });
 
@@ -15,10 +20,6 @@ export const fetchInfoAboutBitcoinError = (errorAboutBitcoin) => ({
   payload: errorAboutBitcoin,
 });
 
-// export const fetchInfoAboutEnumerum = () => ({
-//   type: CryptoActionTypes.ENUMERUM_START,
-// });
-
 export const fetchInfoAboutEnumerumSuccess = (infoAboutEnumerum) => ({
   type: CryptoActionTypes.ENUMERUM_SUCCESS,
   payload: infoAboutEnumerum,
@@ -28,10 +29,6 @@ export const fetchInfoAboutEnumerumError = (errorAboutEnumerum) => ({
   type: CryptoActionTypes.ENUMERUM_ERROR,
   payload: errorAboutEnumerum,
 });
-
-// export const fetchInfoAboutEOS = () => ({
-//   type: CryptoActionTypes.EOS_START,
-// });
 
 export const fetchInfoAboutEOSSuccess = (infoAboutEOS) => ({
   type: CryptoActionTypes.EOS_SUCCESS,

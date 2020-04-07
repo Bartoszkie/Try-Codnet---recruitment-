@@ -5,6 +5,7 @@ const INITIAL_STATE = {
   loading: true,
   errorMessage: undefined,
   pathname: "",
+  date: "",
 };
 
 const CryptoReducer = (state = INITIAL_STATE, action) => {
@@ -29,6 +30,11 @@ const CryptoReducer = (state = INITIAL_STATE, action) => {
       return {
         ...state,
         errorMessage: action.payload,
+      };
+    case CryptoActionTypes.GET_DATE:
+      return {
+        ...state,
+        date: action.payload,
       };
     default:
       return state;

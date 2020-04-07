@@ -1,5 +1,5 @@
 const CryptoActionTypes = {
-  FETCH_START: "FETCH_START", 
+  FETCH_START: "FETCH_START",
   BITCOIN_START: "BITCOIN_START",
   BITCOIN_SUCCESS: "BITCOIN_SUCCESS",
   BITCOIN_ERROR: "BITCOIN_SUCCESS",
@@ -9,6 +9,7 @@ const CryptoActionTypes = {
   EOS_START: "EOS_START",
   EOS_SUCCESS: "EOS_SUCCESS",
   EOS_ERROR: "EOS_ERROR",
+  GET_DATE: "GET_DATE",
 };
 
 export default CryptoActionTypes;
