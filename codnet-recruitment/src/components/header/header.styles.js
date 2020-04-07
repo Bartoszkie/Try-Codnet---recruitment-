@@ -25,7 +25,6 @@ export const HeaderButton = styled(Link)`
 
   &:hover {
     color: ${({ theme }) => theme.darkBlueTextColor};
-    text-decoration: underline;
   }
 `;
 
