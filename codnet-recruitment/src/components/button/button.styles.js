@@ -3,11 +3,11 @@ import styled from "styled-components";
 export const ButtonContainer = styled.button`
   cursor: pointer;
 
-  background-color: #fff;
-  color: #000;
+  background-color: ${(props) => (props.blue ? `#55AFE4` : "#FFFFFF")};
+  color: ${(props) => (props.blue ? `#FFFFFF` : "#2C3440")};
 
-  padding: 0.5rem 1rem;
-  margin: .3rem;
+  padding: 1.3rem 1.8rem 1.3rem 1.8rem;
+  margin-left: 3rem;
 
   outline: none;
   border: none;
@@ -17,5 +17,8 @@ export const ButtonContainer = styled.button`
   &:focus {
     background-color: blue;
     color: #fff;
+
+    background-color: ${(props) => (props.blue ? `#FFFFFF` : "#55AFE4")};
+    color: ${(props) => (props.blue ? `#2C3440` : "#FFFFFF")};
   }
 `;

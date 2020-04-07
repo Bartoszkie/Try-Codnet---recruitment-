@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import Typography from "../typography/typography.component";
-
 import { connect } from "react-redux";
+
+import Button from "../button/button.component";
+import Modal from "../modal/modal.component";
 
 //SYLES
 import {
@@ -13,14 +15,17 @@ import {
 } from "./banner.styles";
 
 const Banner = (props) => {
-  console.log(props.cryptocurrency.loading);
-  console.log(props.selectedCurrency);
+  // console.log(props.cryptocurrency.loading);
+  // console.log(props.selectedCurrency);
+
+  const [openModal, setOpenModal] = useState(false);
 
   const { selectedCurrency } = props.selectedCurrency;
-  console.log(
-    "this is selected-currency in banner components",
-    selectedCurrency
-  );
+  const { cryptocurrency } = props.cryptocurrency;
+
+  const handleOpenModal = () => {
+    setOpenModal(!openModal);
+  };
 
   if (props.cryptocurrency.loading) {
     return <p>Is Loading</p>;
@@ -30,23 +35,20 @@ const Banner = (props) => {
     <BannerContainer>
       <CryptoCurrencyInfo>
         <CryptoCurrencyLogo
-          src={props.cryptocurrency.cryptocurrency.image.small}
+          src={cryptocurrency.image.small}
         ></CryptoCurrencyLogo>
-        <Typography type="h2">
-          {props.cryptocurrency.cryptocurrency.id}
-          <br />
-          {props.cryptocurrency.cryptocurrency.symbol}
-        </Typography>
+        <Typography type="h2">{cryptocurrency.id}</Typography>
+        <Typography type="h2">{`(${cryptocurrency.symbol})`}</Typography>
       </CryptoCurrencyInfo>
 
       <CryptoCurrencyPricingInfo>
         <Typography type="h2">
           {selectedCurrency === "USD"
-            ? `${props.cryptocurrency.cryptocurrency.market_data.current_price.usd}`
+            ? `${cryptocurrency.market_data.current_price.usd}`
             : selectedCurrency === "EUR"
-            ? `${props.cryptocurrency.cryptocurrency.market_data.current_price.eur}`
+            ? `${cryptocurrency.market_data.current_price.eur}`
             : selectedCurrency === "PLN"
-            ? `${props.cryptocurrency.cryptocurrency.market_data.current_price.pln}`
+            ? `${cryptocurrency.market_data.current_price.pln}`
             : null}
         </Typography>
         <CryptoCurrencyValue>
@@ -60,7 +62,17 @@ const Banner = (props) => {
               : null}
           </Typography>
         </CryptoCurrencyValue>
+        <Button blue={true} handleOpenModal={handleOpenModal}>
+          {cryptocurrency.id === "bitcoin"
+            ? `Bitcoin (BTC)`
+            : cryptocurrency.id === "ethereum"
+            ? `Ethereum (ETH)`
+            : cryptocurrency.id === "eos"
+            ? `EOS (EOS)`
+            : null}
+        </Button>
       </CryptoCurrencyPricingInfo>
+      {openModal ? <Modal></Modal> : null}
     </BannerContainer>
   );
 };

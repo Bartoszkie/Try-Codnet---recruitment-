@@ -1,13 +1,13 @@
-import React from 'react';
+import React from "react";
 
-import {ButtonContainer} from './button.styles';
+import { ButtonContainer } from "./button.styles";
 
 const Button = (props) => {
-    return(
-        <ButtonContainer>
-            {props.children}
-        </ButtonContainer>
-    );
-}
+  return (
+    <ButtonContainer onClick={props.handleOpenModal} blue={props.blue}>
+      {props.children}
+    </ButtonContainer>
+  );
+};
 
 export default Button;
