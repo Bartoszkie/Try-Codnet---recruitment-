@@ -1,30 +1,42 @@
-import styled from 'styled-components';
-import {Link} from 'react-router-dom';
+import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 export const FooterContainer = styled.footer`
-    grid-column: full-start / full-end;
-    grid-row: 4 / 5;
-    padding: 2rem 1rem;
+  grid-column: full-start / full-end;
+  grid-row: 4 / 5;
+  padding: 6rem 15rem;
 
-    background-color: #fff;
+  background-color: #fff;
 
-    display: flex;
-    justify-content: space-around;
-    align-items: center;    
-`;  
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 
-export const FooterDataInfo = styled.span`
+  color: ${({ theme }) => theme.greyTextColor};
+
+  & > p {
+    font-weight: 700;
+    font-style: italic;
+  }
 `;
 
-export const FooterNavigation = styled.nav`
-    display: flex;
-    justify-content: center;
+export const FooterDataInfo = styled.span``;
 
-    & > a:not(:first-child) {
-        margin-left: 1rem;
-    }
+export const FooterNavigation = styled.nav`
+  display: flex;
+  justify-content: center;
+
+  & > a:not(:first-child) {
+    margin-left: 1rem;
+  }
 `;
 
 export const FooterNavigationItem = styled(Link)`
-    text-decoration: none;
-`;  
+  text-decoration: none;
+  color: ${({ theme }) => theme.greyTextColor};
+  transition: 0.2s ease-in-out all;
+
+  &:hover {
+    color: ${({ theme }) => theme.darkBlueTextColor};
+  }
+`;

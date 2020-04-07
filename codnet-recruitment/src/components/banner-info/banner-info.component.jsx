@@ -78,7 +78,7 @@ const BannerInfo = (props) => {
             : pathname === "/eos" && market_data.total_supply !== null
             ? `${numberWithCommas(market_data.total_supply)} EOS`
             : market_data.total_supply === null
-            ? `Not provided`
+            ? `Not avalible`
             : null}
         </Typography>
       </BannerInfoBox>

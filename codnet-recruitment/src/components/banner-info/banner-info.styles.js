@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const BannerInfoContainer = styled.section`
   display: flex;
   justify-content: space-around;
-  align-items: center;
+  align-items: flex-start;
 
   padding: 4rem 6rem;
   box-shadow: 0px 20px 60px #a3abba66;
