@@ -10,6 +10,7 @@ import {
   ChartButtonsLeft,
   ChartButtonsRight,
 } from "./chart-container.styles";
+import Chart from "../chart/chart.component";
 
 const ChartContainer = () => {
   return (
@@ -27,6 +28,7 @@ const ChartContainer = () => {
           <Button>15M</Button>
         </ChartButtonsRight>
       </ChartButtonsContainer>
+      <Chart/>
     </CharContainerWrapper>
   );
 };
