@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Switch, Route, Redirect } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
-import { theme, lightTheme, darkTheme } from "./styles/theme.styles";
+import { lightTheme, darkTheme } from "./styles/theme.styles";
 import {ButtonToggle} from "./styles/global.styles";
 //COMPONENTS
 //PAGES

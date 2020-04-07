@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { connect } from "react-redux";
 import AmCharts from "@amcharts/amcharts3-react";
-import moment from 'moment';
 
 import { config, generateChartData, generateGraph } from "./chart.utilities";
 
