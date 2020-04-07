@@ -15,15 +15,10 @@ import {
   CryptoCurrencyPricingInfo,
   CryptoCurrencyValue,
   CryptoCurrencyLevel,
-  CryptoCurrencyPricingValues,
 } from "./banner.styles";
 
 const Banner = (props) => {
-  // console.log(props.cryptocurrency.loading);
-  // console.log(props.selectedCurrency);
-
   const [openModal, setOpenModal] = useState(false);
-
   const { selectedCurrency } = props.selectedCurrency;
   const { cryptocurrency } = props.cryptocurrency;
 

@@ -25,6 +25,22 @@ export const GlobalStyles = createGlobalStyle`
       color: #fff;
       background: #55AFE4;
     }
+
+    body {
+      background: ${({ theme }) => theme.body};
+      color: ${({ theme }) => theme.text};
+    }
+`;
+
+export const ButtonToggle = styled.button`
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  padding: 1rem 2rem;
+  position: relative;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
 `;
 
 export const GlobalGrid = styled.section`

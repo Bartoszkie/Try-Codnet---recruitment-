@@ -22,7 +22,7 @@ export const ModalBox = styled.div`
   flex-direction: column;
   align-items: center;
 
-  background-color: #fff;
+  background-color: ${({ theme }) => theme.headerBackground};;
   border-radius: 5px;
   border: 0.1rem solid #55afe4;
 
@@ -35,7 +35,7 @@ export const ModalBox = styled.div`
 export const CloseButton = styled.button`
   outline: none;
   border: none;
-  background-color: #fff;
+  background-color: transparent;
   position: absolute;
   top: 1rem;
   right: 2rem;
