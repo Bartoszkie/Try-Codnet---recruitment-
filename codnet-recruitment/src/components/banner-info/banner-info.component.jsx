@@ -5,10 +5,6 @@ import { BannerInfoContainer, BannerInfoBox } from "./banner-info.styles";
 import Typography from "../typography/typography.component";
 
 const BannerInfo = (props) => {
-  if (props.cryptocurrency.loading) {
-    return <p>Is Loading</p>;
-  }
-
   const { selectedCurrency } = props.selectedCurrency;
   const { market_data } = props.cryptocurrency.cryptocurrency;
   const { pathname } = props.cryptocurrency;

@@ -3,24 +3,38 @@ import { GlobalGrid, GlobalStyles } from "../styles/global.styles";
 
 //COMPONENTS
 import Header from "../components/header/header.component";
-import Banner from '../components/banner/banner.component';
+import Banner from "../components/banner/banner.component";
 import BannerInfo from "../components/banner-info/banner-info.component";
-import ChartContainer from '../components/chart-container/chart-container.component';
+import ChartContainer from "../components/chart-container/chart-container.component";
 import Footer from "../components/footer/footer.component";
+import { connect } from "react-redux";
+import Spinner from '../components/spinner/spinner.component';
 
-const MainPage = () => {
+const MainPage = (props) => {
+  const { loading } = props.cryptocurrency;
+
   return (
     <React.Fragment>
       <GlobalStyles />
       <GlobalGrid>
         <Header />
-        <Banner/>
-        <BannerInfo/>
-        <ChartContainer/>
-        <Footer/>
+        {!loading ? (
+          <React.Fragment>
+            <Banner />
+            <BannerInfo />
+            <ChartContainer />
+          </React.Fragment>
+        ) : (
+          <Spinner/>
+        )}
+        <Footer />
       </GlobalGrid>
     </React.Fragment>
   );
 };
 
-export default MainPage;
+const mapStateToProps = (state) => ({
+  cryptocurrency: state.crypto,
+});
+
+export default connect(mapStateToProps)(MainPage);

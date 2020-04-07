@@ -27,10 +27,6 @@ const Banner = (props) => {
     setOpenModal(!openModal);
   };
 
-  if (props.cryptocurrency.loading) {
-    return <p>Is Loading</p>;
-  }
-
   return (
     <BannerContainer>
       <CryptoCurrencyInfo>
