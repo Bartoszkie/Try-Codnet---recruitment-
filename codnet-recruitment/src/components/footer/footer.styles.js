@@ -3,14 +3,10 @@ import { Link } from "react-router-dom";
 import { respondTo } from "../../styles/mixins";
 
 export const FooterContainer = styled.footer`
-  /* grid-column: full-start / full-end;
-  grid-row: 4 / 5; */
-  position: absolute;
-  bottom: 0; 
-  left: 0; 
-  width: 100%;
+  grid-column: center-start / center-end;
+  grid-row: 4 / 5;
 
-  padding: 6rem 15rem;
+  padding: 6rem 5rem;
 
   background-color: #fff;
 
@@ -21,19 +17,22 @@ export const FooterContainer = styled.footer`
 
   color: ${({ theme }) => theme.greyTextColor};
 
-  ${respondTo.sm`
-      padding: 3rem 5rem;
-
-    & > p, & > span, & > nav {
-      margin: 2rem 0; 
-      text-align: center;
-    `}
+  font-size: 1.6rem;
 
   & > p {
     font-weight: 700;
     font-style: italic;
     margin: 0 2rem;
   }
+
+  ${respondTo.sm`
+      padding: 3rem 5rem;
+
+    & > p, & > span, & > nav {
+      margin: 2rem 0; 
+      text-align: center;
+    }
+  `}
 `;
 
 export const FooterDataInfo = styled.span`

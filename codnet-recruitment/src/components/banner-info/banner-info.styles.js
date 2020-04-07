@@ -16,14 +16,20 @@ export const BannerInfoContainer = styled.section`
 
   position: absolute;
   z-index: 100;
-  top: 100%;
+  top: 120%;
   left: 50%;
   transform: translate(-50%, -50%);
 
   ${respondTo.sm`
     width: 100%;
     padding: 2rem;
-    top: 120%;
+    top: 145%;
+
+    display: grid; 
+    grid-template-columns: repeat(2, 1fr); 
+    grid-template-rows: repeat(2, min-content);
+
+    justify-content: center;
   `}
 `;
 
@@ -45,6 +51,7 @@ export const BannerInfoBox = styled.div`
   & > h4 {
     color: #000;
     font-size: 1.6rem;
+    font-weight: 400;
   }
 
   & > p:last-child {

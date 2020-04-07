@@ -1,22 +1,14 @@
 import React from "react";
 import { connect } from "react-redux";
-
-import { AboutInfoContainer } from "./about-info.styles";
-import Typography from "../typography/typography.component";
-
+import { AboutInfoContainer, AboutArticle } from "./about-info.styles";
 import { deleteHTMLFromString } from "../utilities/numberFunctions";
 
 const AboutInfo = ({ cryptocurrency }) => {
-  console.log(
-    "this is data from about info",
-    cryptocurrency.cryptocurrency.description.en
-  );
-
   return (
     <AboutInfoContainer>
-      <Typography type="p">
+      <AboutArticle>
         {deleteHTMLFromString(cryptocurrency.cryptocurrency.description.en)}
-      </Typography>
+      </AboutArticle>
     </AboutInfoContainer>
   );
 };

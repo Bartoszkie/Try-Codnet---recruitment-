@@ -11,6 +11,7 @@ import {
   ChartButtonsContainer,
   ChartButtonsLeft,
   ChartButtonsRight,
+  ChartMaxWidth
 } from "./chart-container.styles";
 import Chart from "../chart/chart.component";
 

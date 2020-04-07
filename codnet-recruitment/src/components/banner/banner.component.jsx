@@ -5,6 +5,7 @@ import { connect } from "react-redux";
 import Button from "../button/button.component";
 import Modal from "../modal/modal.component";
 import BannerInfo from '../banner-info/banner-info.component';
+import { numberWithCommas } from "../utilities/numberFunctions";
 
 //SYLES
 import {
@@ -41,11 +42,11 @@ const Banner = (props) => {
       <CryptoCurrencyPricingInfo>
         <Typography type="h2">
           {selectedCurrency === "USD"
-            ? `${cryptocurrency.market_data.current_price.usd}`
+            ? `${numberWithCommas(cryptocurrency.market_data.current_price.usd)}`
             : selectedCurrency === "EUR"
-            ? `${cryptocurrency.market_data.current_price.eur}`
+            ? `${numberWithCommas(cryptocurrency.market_data.current_price.eur)}`
             : selectedCurrency === "PLN"
-            ? `${cryptocurrency.market_data.current_price.pln}`
+            ? `${numberWithCommas(cryptocurrency.market_data.current_price.pln)}`
             : null}
         </Typography>
         <CryptoCurrencyValue>

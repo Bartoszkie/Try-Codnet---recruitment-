@@ -20,13 +20,13 @@ const MainPage = (props) => {
         <Header />
         {!loading ? (
           <React.Fragment>
-            <Banner />
-            <ChartContainer />
+            <Banner/>
+            <ChartContainer/>
+            <Footer/>
           </React.Fragment>
         ) : (
           <Spinner />
         )}
-        <Footer />
       </GlobalGrid>
     </React.Fragment>
   );

@@ -24,9 +24,9 @@ const Header = (props) => {
   const { pathname } = useLocation();
 
   const handleChange = (e) => {
+    console.log("Navbar Value: ", e.target.value);
     setOptionsState(e.target.value);
-    props.changeCurrency(optionsState);
-    console.log(optionsState);
+    props.changeCurrency(e.target.value);
   };
 
   const actionToTriggerPathname = () => {

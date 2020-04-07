@@ -17,7 +17,7 @@ const Footer = ({ cryptocurrency: cryptocurrency }) => {
       <Typography type="p">Zadanie rekrutacyjne Try Codnet</Typography>
       <FooterNavigation>
         <FooterNavigationItem to="/bitcoin">Bitcoin</FooterNavigationItem>
-        <FooterNavigationItem to="/enumerum">Ethereum</FooterNavigationItem>
+        <FooterNavigationItem to="/ethereum">Ethereum</FooterNavigationItem>
         <FooterNavigationItem to="/eos">Eos</FooterNavigationItem>
       </FooterNavigation>
     </FooterContainer>

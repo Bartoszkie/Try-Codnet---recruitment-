@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { respondTo } from "../../styles/mixins";
 
 export const HeaderContainer = styled.header`
-  grid-column: full-start / full-end;
+  grid-column: center-start / center-end;
   grid-row: 1 / 2;
 
   display: flex;
@@ -13,11 +13,12 @@ export const HeaderContainer = styled.header`
 
   box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.1);
 
-  padding: 2rem 2rem;
+  padding: 2rem 5rem;
   position: relative;
 
   ${respondTo.sm`
-    padding-bottom: 5rem;
+    grid-column: left-space-start / right-space-end;
+    padding-bottom: 8rem;
   `}
 `;
 
@@ -63,6 +64,10 @@ export const HeaderAppName = styled.div`
   font-size: 2.2rem;
   font-weight: 700;
   color: ${({ theme }) => theme.lightBlueTextColor};
+
+  ${respondTo.md`
+      margin-right: 1rem;
+  `}
 `;
 
 export const HeaderAppNameBold = styled.span`

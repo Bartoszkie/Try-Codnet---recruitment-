@@ -19,10 +19,6 @@ export const GlobalStyles = createGlobalStyle`
           @media only screen and (max-width: 900px) { 
               font-size: 50%; 
           }
-
-          @media only screen and (min-width: 1200px) {
-              font-size: 75%; 
-          }
     }
 
     ::selection {
@@ -34,15 +30,21 @@ export const GlobalStyles = createGlobalStyle`
 export const GlobalGrid = styled.section`
   display: grid;
   grid-template-columns:
-    [full-start] minmax(15rem, 1fr) [center-start] repeat(
-      8,
-      minmax(min-content, 14rem)
-    )
-    [center-end] minmax(15rem, 1fr) [full-end];
-  grid-template-rows: min-content min-content 60vh min-content;
+    [left-space-start] minmax(10.4rem, 1fr)
+    [left-space-end center-start] repeat(10, minmax(min-content, 12rem))
+    [center-end right-space-start] minmax(10.4rem, 1fr) [ right-space-end];
+  grid-template-rows: min-content min-content minmax(min-content, 1fr) min-content;
   justify-content: center;
-
-  height: 100vh;
-
+  /* height: 100vh; */
   position: relative;
+
+  @media (max-width: 600px) {
+    grid-template-columns:
+      [left-space-start] minmax(min-content, 1fr)
+      [left-space-end center-start] repeat(10, minmax(min-content, 12rem))
+      [center-end right-space-start] minmax(min-content, 1fr)
+      [ right-space-end];
+    height: auto;
+    grid-template-rows: min-content min-content max-content min-content;
+  }
 `;

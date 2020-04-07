@@ -2,10 +2,10 @@ import styled from "styled-components";
 import { respondTo } from "../../styles/mixins";
 
 export const BannerContainer = styled.section`
-  grid-column: full-start / full-end;
+  grid-column: center-start / center-end;
   grid-row: 2 / 3;
 
-  padding: 3rem 15rem;
+  padding: 3rem 1rem;
   height: 27vh;
 
   display: flex;
@@ -14,10 +14,17 @@ export const BannerContainer = styled.section`
 
   position: relative;
 
+  ${respondTo.lgSm`
+    padding: 3rem 0rem;
+  `};
+
   ${respondTo.sm`
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+    grid-column: left-space-start / right-space-end;
+
+    padding: 3rem 2rem;
   `}
 `;
 
@@ -41,7 +48,6 @@ export const CryptoCurrencyInfo = styled.div`
   ${respondTo.sm`
       margin-bottom: 3rem;
   `}
-
 `;
 
 export const CryptoCurrencyLogo = styled.img`
@@ -54,6 +60,16 @@ export const CryptoCurrencyPricingInfo = styled.div`
   display: flex;
   font-size: 3.6rem;
   color: ${({ theme }) => theme.lightBlueTextColor};
+
+  ${respondTo.sm`
+    flex-direction: column;
+    align-items: center;
+
+    & > button {
+      margin-top: 1rem;
+      margin-left: 0;
+    }
+  `}
 `;
 
 export const CryptoCurrencyValue = styled.span`
