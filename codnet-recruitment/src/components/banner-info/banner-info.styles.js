@@ -31,6 +31,7 @@ export const BannerInfoContainer = styled.section`
 
     justify-content: center;
   `}
+
 `;
 
 export const BannerInfoBox = styled.div`

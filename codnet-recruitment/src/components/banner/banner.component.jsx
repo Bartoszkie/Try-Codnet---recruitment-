@@ -60,7 +60,7 @@ const Banner = (props) => {
               : null}
           </Typography>
         </CryptoCurrencyValue>
-        <Button blue={true} handleOpenModal={handleOpenModal}>
+        <Button blue={true} handleOpen={handleOpenModal}>
           {cryptocurrency.id === "bitcoin"
             ? `Buy Bitcoin (BTC)`
             : cryptocurrency.id === "ethereum"
