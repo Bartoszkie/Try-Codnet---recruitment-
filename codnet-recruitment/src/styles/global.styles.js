@@ -22,7 +22,7 @@ export const GlobalGrid = styled.section`
       minmax(min-content, 14rem)
     )
     [center-end] minmax(15rem, 1fr) [full-end];
-  grid-template-rows: min-content min-content 1fr min-content;
+  grid-template-rows: min-content min-content 60vh min-content;
   height: 100vh;
   position: relative;
 `;

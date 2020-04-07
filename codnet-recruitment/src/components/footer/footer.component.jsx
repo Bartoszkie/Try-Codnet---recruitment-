@@ -14,11 +14,11 @@ const Footer = ({ cryptocurrency: cryptocurrency }) => {
   return (
     <FooterContainer>
       <FooterDataInfo>Last Update: {cryptocurrency.date}</FooterDataInfo>
-      <Typography type="p">Recruitment Task</Typography>
+      <Typography type="p">Zadanie rekrutacyjne Try Codnet</Typography>
       <FooterNavigation>
         <FooterNavigationItem to="/bitcoin">Bitcoin</FooterNavigationItem>
-        <FooterNavigationItem to="/enumerum">Enumerum</FooterNavigationItem>
-        <FooterNavigationItem to="/eos">eos</FooterNavigationItem>
+        <FooterNavigationItem to="/enumerum">Ethereum</FooterNavigationItem>
+        <FooterNavigationItem to="/eos">Eos</FooterNavigationItem>
       </FooterNavigation>
     </FooterContainer>
   );

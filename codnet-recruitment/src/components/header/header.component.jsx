@@ -46,7 +46,7 @@ const Header = (props) => {
 
       <HeaderNavigation>
         <HeaderButton to="/bitcoin">Bitcoin</HeaderButton>
-        <HeaderButton to="/ethereum">Enumerum</HeaderButton>
+        <HeaderButton to="/ethereum">Ethereum</HeaderButton>
         <HeaderButton to="/eos">EOS</HeaderButton>
       </HeaderNavigation>
 
