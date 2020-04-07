@@ -1,9 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import Typography from "../typography/typography.component";
 import { connect } from "react-redux";
 
 import Button from "../button/button.component";
 import Modal from "../modal/modal.component";
+
+import { useOnClckOutside } from "../hooks/useOnClickOutside.hook";
 
 //SYLES
 import {
@@ -15,9 +17,6 @@ import {
 } from "./banner.styles";
 
 const Banner = (props) => {
-  // console.log(props.cryptocurrency.loading);
-  // console.log(props.selectedCurrency);
-
   const [openModal, setOpenModal] = useState(false);
 
   const { selectedCurrency } = props.selectedCurrency;
@@ -72,7 +71,9 @@ const Banner = (props) => {
             : null}
         </Button>
       </CryptoCurrencyPricingInfo>
-      {openModal ? <Modal></Modal> : null}
+      {openModal ? (
+        <Modal openModal={openModal} setOpenModal={setOpenModal}></Modal>
+      ) : null}
     </BannerContainer>
   );
 };

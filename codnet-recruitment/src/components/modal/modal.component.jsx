@@ -1,14 +1,20 @@
-import React from "react";
+import React, { useState, useRef } from "react";
 
-import { ModalBox, ModalContainer } from "./modal.styles";
+import { ModalBox, ModalContainer, ButtonModal } from "./modal.styles";
 import Typography from "../typography/typography.component";
+import Button from "../button/button.component";
 
-const Modal = () => {
+const Modal = (props) => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  console.log(isOpen);
+
   return (
-    <ModalContainer>
+    <ModalContainer isOpen={isOpen}>
       <ModalBox>
-        <Typography type="h3">Feaeture in building</Typography>
-        <Typography type="p">
+        <ButtonModal onClick={() => setIsOpen(!isOpen)}>X</ButtonModal>
+        <Typography type="h1">Feature in building</Typography>
+        <Typography type="h2">
           This module is in development process, stay tuned!
         </Typography>
       </ModalBox>
