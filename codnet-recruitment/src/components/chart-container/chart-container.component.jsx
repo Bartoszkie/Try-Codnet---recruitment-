@@ -18,10 +18,6 @@ import Chart from "../chart/chart.component";
 
 const ChartContainer = (props) => {
   const [infoChange, setInfoChange] = useState({ show: "charts" });
-
-  console.log("This is infoChange", infoChange);
-  console.log("Props: ", props.cryptocurrency.pathname);
-
   const { show } = infoChange;
 
   return (

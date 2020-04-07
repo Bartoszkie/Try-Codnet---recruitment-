@@ -61,6 +61,11 @@ export const CryptoCurrencyPricingInfo = styled.div`
   font-size: 3.6rem;
   color: ${({ theme }) => theme.lightBlueTextColor};
 
+  & > h2,
+  span {
+    transform: translateY(-3rem);
+  }
+
   ${respondTo.sm`
     flex-direction: column;
     align-items: center;
@@ -72,8 +77,24 @@ export const CryptoCurrencyPricingInfo = styled.div`
   `}
 `;
 
+export const CryptoCurrencyPricingValues = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
 export const CryptoCurrencyValue = styled.span`
   margin-left: 0.5rem;
   font-weight: 100;
   color: ${({ theme }) => theme.darkTextColor};
+  position: relative;
+`;
+
+export const CryptoCurrencyLevel = styled.span`
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: ${({ theme }) => theme.darkTextColor};
+  position: absolute;
+  top: 155%;
+  right: .6rem; 
 `;

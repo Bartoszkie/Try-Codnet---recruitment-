@@ -45,6 +45,6 @@ export const GlobalGrid = styled.section`
       [center-end right-space-start] minmax(min-content, 1fr)
       [ right-space-end];
     height: auto;
-    grid-template-rows: min-content min-content max-content min-content;
+    grid-template-rows: min-content 40rem 100rem 9rem;
   }
 `;

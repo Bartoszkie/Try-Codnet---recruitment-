@@ -32,6 +32,17 @@ export const BannerInfoContainer = styled.section`
     justify-content: center;
   `}
 
+  @media (max-height: 800px) {
+    top: 180%;
+  }
+
+  @media (max-height: 700px) {
+    top: 210%;
+  }
+
+  @media (max-height: 600px) {
+    top: 235%;
+  }
 `;
 
 export const BannerInfoBox = styled.div`
