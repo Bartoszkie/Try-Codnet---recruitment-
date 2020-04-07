@@ -4,6 +4,7 @@ import { connect } from "react-redux";
 
 import Button from "../button/button.component";
 import Modal from "../modal/modal.component";
+import BannerInfo from '../banner-info/banner-info.component';
 
 //SYLES
 import {
@@ -69,6 +70,7 @@ const Banner = (props) => {
         </Button>
       </CryptoCurrencyPricingInfo>
       {openModal ? <Modal></Modal> : null}
+      <BannerInfo />
     </BannerContainer>
   );
 };

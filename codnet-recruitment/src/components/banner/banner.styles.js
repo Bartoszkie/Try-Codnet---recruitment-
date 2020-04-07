@@ -10,6 +10,8 @@ export const BannerContainer = styled.section`
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  position: relative;
 `;
 
 export const CryptoCurrencyInfo = styled.div`

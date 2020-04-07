@@ -21,7 +21,6 @@ const MainPage = (props) => {
         {!loading ? (
           <React.Fragment>
             <Banner />
-            <BannerInfo />
             <ChartContainer />
           </React.Fragment>
         ) : (
