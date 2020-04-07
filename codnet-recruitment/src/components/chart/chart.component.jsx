@@ -43,6 +43,7 @@ const Chart = () => {
     // let scrollbarX = new am4charts.XYChartScrollbar();
     // scrollbarX.series.push(series);
     // chart.scrollbarX = scrollbarX;
+    
     let data = [];
     let price1 = 1000,
       price2 = 1200;
