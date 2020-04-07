@@ -16,7 +16,7 @@ export const BannerInfoContainer = styled.section`
 
   position: absolute;
   z-index: 100;
-  top: 120%;
+  top: 100%;
   left: 50%;
   transform: translate(-50%, -50%);
 
@@ -32,16 +32,8 @@ export const BannerInfoContainer = styled.section`
     justify-content: center;
   `}
 
-  @media (max-height: 800px) {
-    top: 180%;
-  }
-
-  @media (max-height: 700px) {
-    top: 210%;
-  }
-
-  @media (max-height: 600px) {
-    top: 235%;
+  @media (max-width: 360px) {
+    top: 220%;
   }
 `;
 

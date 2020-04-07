@@ -35,7 +35,7 @@ export const GlobalGrid = styled.section`
     [center-end right-space-start] minmax(10.4rem, 1fr) [ right-space-end];
   grid-template-rows: min-content min-content minmax(min-content, 1fr) min-content;
   justify-content: center;
-  /* height: 100vh; */
+  height: 100vh;
   position: relative;
 
   @media (max-width: 600px) {
