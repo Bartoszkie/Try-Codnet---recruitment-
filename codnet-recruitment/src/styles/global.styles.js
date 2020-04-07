@@ -10,6 +10,7 @@ export const GlobalStyles = createGlobalStyle`
     html {
         box-sizing: border-box;
         font-size: 62.5%;
+        font-family: 'Roboto', sans-serif;
     }
 `;
 

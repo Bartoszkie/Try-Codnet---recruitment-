@@ -4,7 +4,7 @@ export const BannerContainer = styled.section`
   grid-column: full-start / full-end;
   grid-row: 2 / 3;
 
-  padding: 4rem 2rem;
+  padding: 3rem 15rem;
   height: 27vh;
 
   display: flex;
