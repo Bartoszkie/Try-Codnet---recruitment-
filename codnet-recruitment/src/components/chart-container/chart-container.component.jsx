@@ -1,24 +1,44 @@
-import React from "react";
+import React, { useState } from "react";
+import { connect } from "react-redux";
 
 //COMPONENTS
 import Button from "../button/button.component";
+import AboutInfo from "../about-info/about-info.component";
 
 //STYLES
 import {
-    CharContainerWrapper,
+  CharContainerWrapper,
   ChartButtonsContainer,
   ChartButtonsLeft,
   ChartButtonsRight,
 } from "./chart-container.styles";
 import Chart from "../chart/chart.component";
 
-const ChartContainer = () => {
+const ChartContainer = (props) => {
+  const [infoChange, setInfoChange] = useState({ show: "charts" });
+
+  console.log("This is infoChange", infoChange);
+  console.log("Props: ", props.cryptocurrency.pathname);
+
+  const { show } = infoChange;
+
   return (
     <CharContainerWrapper>
       <ChartButtonsContainer>
         <ChartButtonsLeft>
-          <Button>Charts</Button>
-          <Button>About Bitcoin</Button>
+          <Button handleOpen={() => setInfoChange({ show: "charts" })}>
+            Charts
+          </Button>
+          <Button handleOpen={() => setInfoChange({ show: "about" })}>
+            About
+            {props.cryptocurrency.pathname === "/bitcoin"
+              ? " Bitcoin"
+              : props.cryptocurrency.pathname === "/ethereum"
+              ? " Ethereum"
+              : props.cryptocurrency.pathname === "/eos"
+              ? " EOS"
+              : null}
+          </Button>
         </ChartButtonsLeft>
         <ChartButtonsRight>
           <Button>1W</Button>
@@ -28,9 +48,13 @@ const ChartContainer = () => {
           <Button>15M</Button>
         </ChartButtonsRight>
       </ChartButtonsContainer>
-      <Chart/>
+      {show === "charts" ? <Chart /> : <AboutInfo />}
     </CharContainerWrapper>
   );
 };
 
-export default ChartContainer;
+const mapStateToProps = (state) => ({
+  cryptocurrency: state.crypto,
+});
+
+export default connect(mapStateToProps)(ChartContainer);

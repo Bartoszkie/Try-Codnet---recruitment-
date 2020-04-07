@@ -4,7 +4,7 @@ import { ButtonContainer } from "./button.styles";
 
 const Button = (props) => {
   return (
-    <ButtonContainer onClick={props.handleOpenModal} blue={props.blue}>
+    <ButtonContainer onClick={props.handleOpen} blue={props.blue}>
       {props.children}
     </ButtonContainer>
   );

@@ -6,7 +6,7 @@ export const CharContainerWrapper = styled.section`
 
   background-color: rgba(0, 0, 0, 0.1);
 
-  padding: 9rem 2rem 2rem 2rem; 
+  padding: 9rem 2rem 2rem 2rem;
 `;
 
 export const ChartButtonsContainer = styled.div`
@@ -15,10 +15,6 @@ export const ChartButtonsContainer = styled.div`
   align-items: center;
 `;
 
-export const ChartButtonsLeft = styled.div`
+export const ChartButtonsLeft = styled.div``;
 
-`;
-
-export const ChartButtonsRight = styled.div`
-
-`;
+export const ChartButtonsRight = styled.div``;
