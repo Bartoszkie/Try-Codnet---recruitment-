@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.js": "/bitcoin/static/js/main.f7d7a8ae.chunk.js",
-    "main.js.map": "/bitcoin/static/js/main.f7d7a8ae.chunk.js.map",
-    "runtime-main.js": "/bitcoin/static/js/runtime-main.c2ccc8fd.js",
-    "runtime-main.js.map": "/bitcoin/static/js/runtime-main.c2ccc8fd.js.map",
-    "static/js/2.ed569d45.chunk.js": "/bitcoin/static/js/2.ed569d45.chunk.js",
-    "static/js/2.ed569d45.chunk.js.map": "/bitcoin/static/js/2.ed569d45.chunk.js.map",
-    "index.html": "/bitcoin/index.html",
-    "precache-manifest.8707288883426a61d1dabc82fbe4590b.js": "/bitcoin/precache-manifest.8707288883426a61d1dabc82fbe4590b.js",
-    "service-worker.js": "/bitcoin/service-worker.js",
-    "static/js/2.ed569d45.chunk.js.LICENSE.txt": "/bitcoin/static/js/2.ed569d45.chunk.js.LICENSE.txt"
+    "main.js": "/Try-Codnet---recruitment-/static/js/main.7a8dc261.chunk.js",
+    "main.js.map": "/Try-Codnet---recruitment-/static/js/main.7a8dc261.chunk.js.map",
+    "runtime-main.js": "/Try-Codnet---recruitment-/static/js/runtime-main.e568f83b.js",
+    "runtime-main.js.map": "/Try-Codnet---recruitment-/static/js/runtime-main.e568f83b.js.map",
+    "static/js/2.dc8d7cb5.chunk.js": "/Try-Codnet---recruitment-/static/js/2.dc8d7cb5.chunk.js",
+    "static/js/2.dc8d7cb5.chunk.js.map": "/Try-Codnet---recruitment-/static/js/2.dc8d7cb5.chunk.js.map",
+    "index.html": "/Try-Codnet---recruitment-/index.html",
+    "precache-manifest.490d39bde43ad9832c05f01525c4a7b6.js": "/Try-Codnet---recruitment-/precache-manifest.490d39bde43ad9832c05f01525c4a7b6.js",
+    "service-worker.js": "/Try-Codnet---recruitment-/service-worker.js",
+    "static/js/2.dc8d7cb5.chunk.js.LICENSE.txt": "/Try-Codnet---recruitment-/static/js/2.dc8d7cb5.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.c2ccc8fd.js",
-    "static/js/2.ed569d45.chunk.js",
-    "static/js/main.f7d7a8ae.chunk.js"
+    "static/js/runtime-main.e568f83b.js",
+    "static/js/2.dc8d7cb5.chunk.js",
+    "static/js/main.7a8dc261.chunk.js"
   ]
 }
