@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { connect } from "react-redux";
 import AmCharts from "@amcharts/amcharts3-react";
-
+import { connect } from "react-redux";
 import { config, generateChartData, generateGraph } from "./chart.utilities";
 
 class Chart extends React.Component {
