@@ -9,7 +9,7 @@
     - First: styled-components (JS in CSS) 
     - Second: Sass preprocessor
   - Elements were placed using CSS Grid and Flexbox techniques (basic RWD applied)
-  - Application is prepared for PWA on basic level (gh-pages do not allow to confiure routes on server side - problem with change route on     live preview)
+  - Application is prepared for PWA on basic level
   - Reusable global variables of theme module 
   - React Hooks insead of traditional class-based components 
   - tests: Jest and Enzyme 
