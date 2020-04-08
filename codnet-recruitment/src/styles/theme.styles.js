@@ -18,6 +18,7 @@ export const lightTheme = {
   lightBlueButtonColor: "#55AFE4",
   whiteTextColor: "#FFFFFF",
   headerBackground: "#FFFFFF",
+  boxShadow: "#8A94A4",
 };
 
 export const darkTheme = {
@@ -31,4 +32,5 @@ export const darkTheme = {
   lightBlueButtonColor: "#55AFE4",
   whiteTextColor: "#FFFFFF",
   headerBackground: "#8A94A4",
+  boxShadow: "#55AFE4",
 };

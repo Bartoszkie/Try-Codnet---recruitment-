@@ -8,33 +8,23 @@ export const BannerInfoContainer = styled.section`
   flex-wrap: wrap;
 
   padding: 4rem 6rem;
+  margin-top: 2rem;
+
   box-shadow: 0px 20px 60px #a3abba66;
   border-radius: 5px;
 
   background-color: #fff;
   width: 80%;
 
-  position: absolute;
-  z-index: 100;
-  top: 100%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-
   ${respondTo.sm`
     width: 100%;
     padding: 2rem;
-    top: 145%;
-
     display: grid; 
     grid-template-columns: repeat(2, 1fr); 
     grid-template-rows: repeat(2, min-content);
 
     justify-content: center;
   `}
-
-  @media (max-width: 360px) {
-    top: 220%;
-  }
 `;
 
 export const BannerInfoBox = styled.div`

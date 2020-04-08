@@ -14,7 +14,8 @@ export const FooterContainer = styled.footer`
   flex-wrap: wrap;
 
   color: ${({ theme }) => theme.greyTextColor};
-  border-top: .1rem solid ${({ theme }) => theme.headerBackground};
+
+  box-shadow: 0 -4px 2px -2px ${({ theme }) => theme.boxShadow};
 
   font-size: 1.6rem;
 
