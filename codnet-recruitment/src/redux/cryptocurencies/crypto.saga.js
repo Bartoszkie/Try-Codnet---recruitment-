@@ -32,6 +32,7 @@ export function* fetchCryptoAsync({ payload: pathname }) {
         yield put(fetchDate(date));
         yield put(fetchInfoAboutBitcoinSuccess(fetchDataAboutBitcoinJSON));
       } catch (error) {
+        console.log("Saga problem error");
         yield put(fetchInfoAboutBitcoinError(error));
       }
     } else if (pathname === "/ethereum") {

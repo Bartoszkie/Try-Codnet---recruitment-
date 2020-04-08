@@ -12,24 +12,26 @@ import Modal from "../components/modal/modal.component";
 
 const MainPage = (props) => {
   const [openModal, setOpenModal] = useState(false);
-  const { loading, error } = props.cryptocurrency;
+  const { loading, errorMessage } = props.cryptocurrency;
 
   const handleOpenModal = () => {
     setOpenModal(!openModal);
   };
+
+  console.log("errorMessage: ", errorMessage);
 
   return (
     <React.Fragment>
       <GlobalStyles />
       <GlobalGrid>
         <Header />
-        {!loading && error === undefined ? (
+        {!loading && errorMessage === undefined ? (
           <React.Fragment>
             <Banner />
             <ChartContainer />
             <Footer />
           </React.Fragment>
-        ) : !loading && error !== undefined ? (
+        ) : !loading && errorMessage !== undefined ? (
           <Modal
             handleOpen={handleOpenModal}
             h2={"Something went wrong :("}
