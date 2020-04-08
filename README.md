@@ -8,6 +8,7 @@
   - Styling is prepared thanks to 2 dependencies: 
     - First: styled-components (JS in CSS) 
     - Second: Sass preprocessor
+  - Elements were placed using CSS Grid and Flexbox techniques (basic RWD applied)
   - Reusable global variables of theme module 
   - React Hooks insead of traditional class-based components 
   - tests: Jest and Enzyme 
