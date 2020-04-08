@@ -1,6 +1,9 @@
-import React, { useEffect, useState } from "react";
-import AmCharts from "@amcharts/amcharts3-react";
+import React from "react";
 import { connect } from "react-redux";
+import 'amcharts3';
+import 'amcharts3/amcharts/serial';
+import AmCharts from '@amcharts/amcharts3-react';
+
 import { config, generateChartData, generateGraph } from "./chart.utilities";
 
 class Chart extends React.Component {
@@ -8,14 +11,12 @@ class Chart extends React.Component {
     super(props);
     this.state = {
       type: "line",
-      data: this.generateChartData2(),
+      data: generateChartData(),
       chartedProps: [
         { prop: "sales", lineColor: "#49a6f4" },
         { prop: "commission", lineColor: "#000000" },
       ],
     };
-
-    console.log("from chart", this.state.data);
   }
 
   generateChartData2 = () => {
@@ -29,7 +30,7 @@ class Chart extends React.Component {
       cryptoValue: cryptocurrency.market_data.current_price.usd,
     });
 
-    // return chartData;
+    return chartData;
   };
 
   getGraphs() {

@@ -17,7 +17,7 @@ export const CharContainerWrapper = styled.section`
   `}
 
   ${respondTo.sm`
-    padding: 30rem 2rem 2rem 2rem;
+    padding: 5rem 2rem 2rem 2rem;
     justify-content: center;
   `}
 `;

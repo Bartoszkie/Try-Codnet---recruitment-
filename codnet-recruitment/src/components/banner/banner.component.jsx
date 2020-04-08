@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 
 import Button from "../button/button.component";
 import Modal from "../modal/modal.component";
-import BannerInfo from '../banner-info/banner-info.component';
+import BannerInfo from "../banner-info/banner-info.component";
 import { numberWithCommas } from "../utilities/numberFunctions";
 
 //SYLES
@@ -14,14 +14,11 @@ import {
   CryptoCurrencyLogo,
   CryptoCurrencyPricingInfo,
   CryptoCurrencyValue,
+  CryptoCurrencyLevel,
 } from "./banner.styles";
 
 const Banner = (props) => {
-  // console.log(props.cryptocurrency.loading);
-  // console.log(props.selectedCurrency);
-
   const [openModal, setOpenModal] = useState(false);
-
   const { selectedCurrency } = props.selectedCurrency;
   const { cryptocurrency } = props.cryptocurrency;
 
@@ -42,11 +39,17 @@ const Banner = (props) => {
       <CryptoCurrencyPricingInfo>
         <Typography type="h2">
           {selectedCurrency === "USD"
-            ? `${numberWithCommas(cryptocurrency.market_data.current_price.usd)}`
+            ? `${numberWithCommas(
+                cryptocurrency.market_data.current_price.usd
+              )}`
             : selectedCurrency === "EUR"
-            ? `${numberWithCommas(cryptocurrency.market_data.current_price.eur)}`
+            ? `${numberWithCommas(
+                cryptocurrency.market_data.current_price.eur
+              )}`
             : selectedCurrency === "PLN"
-            ? `${numberWithCommas(cryptocurrency.market_data.current_price.pln)}`
+            ? `${numberWithCommas(
+                cryptocurrency.market_data.current_price.pln
+              )}`
             : null}
         </Typography>
         <CryptoCurrencyValue>
@@ -59,6 +62,21 @@ const Banner = (props) => {
               ? "PLN"
               : null}
           </Typography>
+          <CryptoCurrencyLevel>
+            {selectedCurrency === "USD"
+              ? `${numberWithCommas(
+                  cryptocurrency.market_data.price_change_24h_in_currency.usd
+                )} USD`
+              : selectedCurrency === "EUR"
+              ? `${numberWithCommas(
+                  cryptocurrency.market_data.price_change_24h_in_currency.eur
+                )} EUR`
+              : selectedCurrency === "PLN"
+              ? `${numberWithCommas(
+                  cryptocurrency.market_data.price_change_24h_in_currency.pln
+                )} PLN`
+              : null}
+          </CryptoCurrencyLevel>
         </CryptoCurrencyValue>
         <Button blue={true} handleOpen={handleOpenModal}>
           {cryptocurrency.id === "bitcoin"
@@ -70,7 +88,7 @@ const Banner = (props) => {
             : null}
         </Button>
       </CryptoCurrencyPricingInfo>
-      {openModal ? <Modal></Modal> : null}
+      {openModal ? <Modal handleOpen={handleOpenModal}></Modal> : null}
       <BannerInfo />
     </BannerContainer>
   );

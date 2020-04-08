@@ -2,6 +2,7 @@
   "name": "codnet-recruitment",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://bartoszkie.github.io/Try-Codnet---recruitment-/",
   "dependencies": {
     "@amcharts/amcharts3-react": "^3.1.0",
     "@amcharts/amcharts4": "^4.9.13",
@@ -9,11 +10,13 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.2",
+    "gh-pages": "^2.2.0",
     "moment": "^2.24.0",
     "node-sass": "^4.13.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-loader-spinner": "^3.1.5",
     "react-redux": "^7.2.0",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.4.1",
@@ -27,7 +30,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"

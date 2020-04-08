@@ -35,7 +35,6 @@ export function* fetchCryptoAsync({ payload: pathname }) {
         yield put(fetchInfoAboutBitcoinError(error));
       }
     } else if (pathname === "/ethereum") {
-      console.log(pathname);
       try {
         const fetchDataAboutEnumerum = yield fetch(
           "https://api.coingecko.com/api/v3/coins/ethereum"
@@ -48,7 +47,6 @@ export function* fetchCryptoAsync({ payload: pathname }) {
         yield put(fetchInfoAboutEnumerumError(error));
       }
     } else if (pathname === "/eos") {
-      console.log(pathname);
       try {
         const fetchDataAboutEOC = yield fetch(
           "https://api.coingecko.com/api/v3/coins/eos"

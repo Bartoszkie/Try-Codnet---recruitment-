@@ -11,7 +11,7 @@ export const HeaderContainer = styled.header`
   justify-content: space-between;
   align-items: center;
 
-  box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 2px -2px ${({ theme }) => theme.boxShadow};
 
   padding: 2rem 5rem;
   position: relative;

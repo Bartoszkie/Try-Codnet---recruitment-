@@ -8,14 +8,14 @@ export const FooterContainer = styled.footer`
 
   padding: 6rem 5rem;
 
-  background-color: #fff;
-
   display: flex;
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
 
   color: ${({ theme }) => theme.greyTextColor};
+
+  box-shadow: 0 -4px 2px -2px ${({ theme }) => theme.boxShadow};
 
   font-size: 1.6rem;
 

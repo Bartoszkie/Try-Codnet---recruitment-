@@ -20,10 +20,7 @@ export const ButtonContainer = styled.button`
   `}
 
   &:focus {
-    background-color: blue;
+    background-color: #55AFE4;
     color: #fff;
-
-    background-color: ${(props) => (props.blue ? `#FFFFFF` : "#55AFE4")};
-    color: ${(props) => (props.blue ? `#2C3440` : "#FFFFFF")};
   }
 `;

@@ -29,6 +29,7 @@ const Header = (props) => {
     props.changeCurrency(e.target.value);
   };
 
+
   const actionToTriggerPathname = () => {
     props.fetchInfoAboutCrypto(pathname);
   };
@@ -59,11 +60,9 @@ const Header = (props) => {
   );
 };
 
-const mapStateToProps = (state) => ({});
-
 const mapDispatchToProps = (dispatch) => ({
   fetchInfoAboutCrypto: (pathname) => dispatch(fetchInfoAboutCrypto(pathname)),
   changeCurrency: (currency) => dispatch(HeaderChangeCurrency(currency)),
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(Header);
+export default connect(null, mapDispatchToProps)(Header);

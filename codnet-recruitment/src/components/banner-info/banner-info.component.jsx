@@ -10,8 +10,6 @@ const BannerInfo = (props) => {
   const { market_data } = props.cryptocurrency.cryptocurrency;
   const { pathname } = props.cryptocurrency;
 
-  console.log("selected", pathname);
-
   return (
     <BannerInfoContainer>
       <BannerInfoBox>

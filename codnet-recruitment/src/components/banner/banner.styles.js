@@ -5,26 +5,23 @@ export const BannerContainer = styled.section`
   grid-column: center-start / center-end;
   grid-row: 2 / 3;
 
-  padding: 3rem 1rem;
-  height: 27vh;
+  padding: 13rem 1rem 3rem 1rem;
 
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
 
   position: relative;
 
   ${respondTo.lgSm`
-    padding: 3rem 0rem;
+    padding: 8rem 0rem;
   `};
 
   ${respondTo.sm`
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
     grid-column: left-space-start / right-space-end;
 
-    padding: 3rem 2rem;
+    padding: 8rem 2rem;
   `}
 `;
 
@@ -32,6 +29,8 @@ export const CryptoCurrencyInfo = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  margin-right: auto;
 
   color: ${({ theme }) => theme.darkBlueTextColor};
   font-size: 2.2rem;
@@ -47,6 +46,7 @@ export const CryptoCurrencyInfo = styled.div`
 
   ${respondTo.sm`
       margin-bottom: 3rem;
+      margin-right: 0;
   `}
 `;
 
@@ -61,19 +61,41 @@ export const CryptoCurrencyPricingInfo = styled.div`
   font-size: 3.6rem;
   color: ${({ theme }) => theme.lightBlueTextColor};
 
+  & > h2,
+  span {
+    transform: translateY(-3rem);
+  }
+
   ${respondTo.sm`
     flex-direction: column;
     align-items: center;
+    text-align: center;
 
     & > button {
-      margin-top: 1rem;
+      margin-top: 4rem;
       margin-left: 0;
     }
   `}
+`;
+
+export const CryptoCurrencyPricingValues = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 
 export const CryptoCurrencyValue = styled.span`
   margin-left: 0.5rem;
   font-weight: 100;
   color: ${({ theme }) => theme.darkTextColor};
+  position: relative;
+`;
+
+export const CryptoCurrencyLevel = styled.span`
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: ${({ theme }) => theme.darkTextColor};
+  position: absolute;
+  top: 155%;
+  right: 0.6rem;
 `;
