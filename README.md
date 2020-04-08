@@ -14,3 +14,5 @@
   - React Hooks insead of traditional class-based components 
   - tests: Jest and Enzyme 
  
+### Live preview (need to change route manually when app starts due to gh-pages)
+https://bartoszkie.github.io/Try-Codnet---recruitment-/
