@@ -23,6 +23,7 @@ const App = () => {
         <ButtonToggle onClick={toggleTheme}>Toggle theme</ButtonToggle>
         <Switch>
           <Redirect exact from="/" to="/bitcoin" />
+          <Redirect exact from="/Try-Codnet---recruitment-/" to="/bitcoin" />
           <Route path="/" component={MainPage} />
         </Switch>
       </ThemeProvider>

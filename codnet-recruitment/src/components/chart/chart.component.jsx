@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
-import 'amcharts3';
-import 'amcharts3/amcharts/serial';
+// import 'amcharts3';
+// import 'amcharts3/amcharts/serial';
 import AmCharts from '@amcharts/amcharts3-react';
 
 import { config, generateChartData, generateGraph } from "./chart.utilities";
