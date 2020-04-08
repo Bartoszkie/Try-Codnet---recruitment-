@@ -8,9 +8,9 @@ const Modal = (props) => {
     <ModalContainer onClick={props.handleOpen}>
       <ModalBox>
         <CloseButton onClick={props.handleOpen}></CloseButton>
-        <Typography type="h2">Coming Soon!</Typography>
+        <Typography type="h2">{props.h2}</Typography>
         <Typography type="p">
-          This module is in development process, stay tuned!
+          {props.p}
         </Typography>
       </ModalBox>
     </ModalContainer>

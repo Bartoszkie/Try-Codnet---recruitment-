@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { GlobalGrid, GlobalStyles } from "../styles/global.styles";
 
 //COMPONENTS
@@ -8,21 +8,33 @@ import ChartContainer from "../components/chart-container/chart-container.compon
 import Footer from "../components/footer/footer.component";
 import { connect } from "react-redux";
 import Spinner from "../components/spinner/spinner.component";
+import Modal from "../components/modal/modal.component";
 
 const MainPage = (props) => {
-  const { loading } = props.cryptocurrency;
+  const [openModal, setOpenModal] = useState(false);
+  const { loading, error } = props.cryptocurrency;
+
+  const handleOpenModal = () => {
+    setOpenModal(!openModal);
+  };
 
   return (
     <React.Fragment>
       <GlobalStyles />
       <GlobalGrid>
         <Header />
-        {!loading ? (
+        {!loading && error === undefined ? (
           <React.Fragment>
-            <Banner/>
-            <ChartContainer/>
-            <Footer/>
+            <Banner />
+            <ChartContainer />
+            <Footer />
           </React.Fragment>
+        ) : !loading && error !== undefined ? (
+          <Modal
+            handleOpen={handleOpenModal}
+            h2={"Something went wrong :("}
+            p={"Try again later"}
+          />
         ) : (
           <Spinner />
         )}

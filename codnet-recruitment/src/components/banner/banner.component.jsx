@@ -88,7 +88,13 @@ const Banner = (props) => {
             : null}
         </Button>
       </CryptoCurrencyPricingInfo>
-      {openModal ? <Modal handleOpen={handleOpenModal}></Modal> : null}
+      {openModal ? (
+        <Modal
+          handleOpen={handleOpenModal}
+          h2={"Coming Soon!"}
+          p={"Feature in development!"}
+        ></Modal>
+      ) : null}
       <BannerInfo />
     </BannerContainer>
   );
