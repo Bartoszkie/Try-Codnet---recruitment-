@@ -18,27 +18,29 @@ const MainPage = (props) => {
     setOpenModal(!openModal);
   };
 
-  console.log("errorMessage: ", errorMessage);
-
   return (
     <React.Fragment>
       <GlobalStyles />
       <GlobalGrid>
         <Header />
-        {!loading && errorMessage === undefined ? (
+        {errorMessage === undefined ? (
           <React.Fragment>
-            <Banner />
-            <ChartContainer />
-            <Footer />
+            {!loading && errorMessage === undefined ? (
+              <React.Fragment>
+                <Banner />
+                <ChartContainer />
+                <Footer />
+              </React.Fragment>
+            ) : (
+              <Spinner />
+            )}
           </React.Fragment>
-        ) : !loading && errorMessage !== undefined ? (
+        ) : (
           <Modal
             handleOpen={handleOpenModal}
             h2={"Something went wrong :("}
-            p={"Try again later"}
+            p={"Come back here later"}
           />
-        ) : (
-          <Spinner />
         )}
       </GlobalGrid>
     </React.Fragment>

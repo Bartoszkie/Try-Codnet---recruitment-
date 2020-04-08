@@ -20,42 +20,48 @@ function dateFunction() {
   return dateTime;
 }
 
+const fetchData = async (path) => {
+  const fetchDataAboutCrypto = await fetch(`${path}`).then((response) => {
+    if (response.status >= 400) {
+      throw new Error();
+    }
+    return response.json();
+  });
+  return fetchDataAboutCrypto;
+};
+
 export function* fetchCryptoAsync({ payload: pathname }) {
   while (true) {
     if (pathname === "/bitcoin") {
       try {
-        const fetchDataAboutBitcoin = yield fetch(
+        const data = yield fetchData(
           "https://api.coingecko.com/api/v3/coins/bitcoin"
         );
-        const fetchDataAboutBitcoinJSON = yield fetchDataAboutBitcoin.json();
         const date = dateFunction();
         yield put(fetchDate(date));
-        yield put(fetchInfoAboutBitcoinSuccess(fetchDataAboutBitcoinJSON));
+        yield put(fetchInfoAboutBitcoinSuccess(data));
       } catch (error) {
-        console.log("Saga problem error");
         yield put(fetchInfoAboutBitcoinError(error));
       }
     } else if (pathname === "/ethereum") {
       try {
-        const fetchDataAboutEnumerum = yield fetch(
+        const data = yield fetchData(
           "https://api.coingecko.com/api/v3/coins/ethereum"
         );
-        const fetchDataAboutEnumerumJSON = yield fetchDataAboutEnumerum.json();
         const date = dateFunction();
         yield put(fetchDate(date));
-        yield put(fetchInfoAboutEnumerumSuccess(fetchDataAboutEnumerumJSON));
+        yield put(fetchInfoAboutEnumerumSuccess(data));
       } catch (error) {
         yield put(fetchInfoAboutEnumerumError(error));
       }
     } else if (pathname === "/eos") {
       try {
-        const fetchDataAboutEOC = yield fetch(
+        const data = yield fetchData(
           "https://api.coingecko.com/api/v3/coins/eos"
         );
-        const fetchDataAboutEOCJSON = yield fetchDataAboutEOC.json();
         const date = dateFunction();
         yield put(fetchDate(date));
-        yield put(fetchInfoAboutEOSSuccess(fetchDataAboutEOCJSON));
+        yield put(fetchInfoAboutEOSSuccess(data));
       } catch (error) {
         yield put(fetchInfoAboutEOSError(error));
       }
